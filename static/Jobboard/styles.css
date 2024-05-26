@@ -31,7 +31,7 @@ footer {
 }
 
 .job-card {
-    background-color: #fedad9;
+    background-color: #ffffff;
     border: 1px solid #ffffff;
     border-radius: 5px;
     padding: 1rem;
@@ -40,7 +40,7 @@ footer {
 }
 
 .job-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-10px);
 }
 
 .job-card a {
@@ -51,7 +51,7 @@ footer {
 
 .job-card h2 {
     font-size: 1.2rem;
-    color: #801515;
+    color: #1e1c1c;
     margin: 0 0 0.5rem;
 }
 
