@@ -72,3 +72,13 @@ footer {
     margin: 0.2rem;
     padding: 0.2rem 0.5rem;
 }
+
+@media (max-width: 768px) {
+    .job-listings {
+        grid-template-columns: 1fr;
+    }
+
+    .job-card {
+        margin: 0.5rem 0;
+    }
+}
