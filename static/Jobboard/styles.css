@@ -7,14 +7,14 @@ body {
 }
 
 header {
-    background-color: #333;
+    background-color: #cc3333;
     color: #fff;
     padding: 1rem;
     text-align: center;
 }
 
 footer {
-    background-color: #333;
+    background-color: #cc3333;
     color: #fff;
     padding: 1rem;
     text-align: center;
@@ -31,7 +31,7 @@ footer {
 }
 
 .job-card {
-    background-color: #fff;
+    background-color: #fdbbba;
     border: 1px solid #ddd;
     border-radius: 5px;
     padding: 1rem;
