@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Clear existing content
             jobListings.innerHTML = '';
 
-            const colors = ['#BF0000', '#FF0000', '#E32227', '#F19396', '#FF4433', '#FFECEB'];
+            const colors = ['#ffc09f', '#809bce', '#e8dff5', '#fb6f92', '#84dcc6', '#dfb2f4'];
 
             // Hash function to assign a consistent color to each tag
             function hashStringToColor(str) {
@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 jobCard.classList.add('job-card');
 
                 const shortDescription = job.description.length > 150 
-                    ? job.description.substring(0, 0) + '...'
+                    ? job.description.substring(0, 150) + '...'
                     : job.description;
 
                 const tags = job.tags ? job.tags.split(',').map(tag => {
@@ -32,7 +32,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 }).join('') : '';
 
                 jobCard.innerHTML = `
-                    <a href="job-detail.html?id=${index}">
+                    <a href="job-detail.html?id=${index}" class="job-link">
+                        <i class="fas fa-briefcase"></i>  <!-- Font Awesome Icon -->
                         <h2>${job.title}</h2>
                         <h3>${job.company} - ${job.city}, ${job.country}</h3>
                         <p><strong>Type:</strong> ${job.type}</p>
