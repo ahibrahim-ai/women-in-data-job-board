@@ -43,6 +43,12 @@ footer {
     transform: translateY(-5px);
 }
 
+.job-card a {
+    color: inherit;
+    text-decoration: none; /* Remove underline from links */
+    display: block; /* Ensure the link covers the entire card */
+}
+
 .job-card h2 {
     font-size: 1.2rem;
     color: #ffffff;
