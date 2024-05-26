@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <a href="job-detail.html?id=${index}" class="job-link">
                         <i class="fas fa-briefcase"></i>  <!-- Font Awesome Icon -->
                         <h2>${job.title}</h2>
-                        <h3>${job.company} - ${job.city}, ${job.country}</h3>
+                        <h3>${job.company} - ${job.location}</h3>
                         <p><strong>Type:</strong> ${job.type}</p>
                         <p>${shortDescription.replace(/\n/g, '<br>')}</p>
                         <div class="tags">
