@@ -32,10 +32,10 @@ footer {
 
 .job-card {
     background-color: #fedad9;
-    border: 1px solid #ddd;
+    border: 1px solid #ffffff;
     border-radius: 5px;
     padding: 1rem;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px rgba(45, 16, 16, 0.1);
     transition: transform 0.2s;
 }
 
@@ -45,6 +45,7 @@ footer {
 
 .job-card h2 {
     font-size: 1.2rem;
+    color: #ffffff;
     margin: 0 0 0.5rem;
 }
 
@@ -56,6 +57,7 @@ footer {
 
 .job-card p {
     font-size: 0.9rem;
+    color: #000000;
     margin: 0.5rem 0;
 }
 
@@ -66,7 +68,7 @@ footer {
 }
 
 .job-card .tag {
-    background-color: #e1e1e1;
+    background-color: #faf620;
     border-radius: 3px;
     font-size: 0.8rem;
     margin: 0.2rem;
