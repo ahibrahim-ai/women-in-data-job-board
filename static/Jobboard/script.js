@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 jobCard.classList.add('job-card');
 
                 const shortDescription = job.description.length > 150 
-                    ? job.description.substring(0, 150) + '...'
+                    ? job.description.substring(0, 0) + '...'
                     : job.description;
 
                 const tags = job.tags ? job.tags.split(',').map(tag => {
