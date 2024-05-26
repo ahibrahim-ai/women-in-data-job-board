@@ -11,13 +11,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 const jobCard = document.createElement('div');
                 jobCard.classList.add('job-card');
 
+                const tags = job.tags ? job.tags.split(',').map(tag => `<span class="tag">${tag.trim()}</span>`).join('') : '';
+
                 jobCard.innerHTML = `
                     <h2>${job.title}</h2>
                     <h3>${job.company} - ${job.city}, ${job.country}</h3>
                     <p><strong>Type:</strong> ${job.type}</p>
                     <p>${job.description.replace(/\n/g, '<br>')}</p>
                     <div class="tags">
-                        ${job.tags.split(',').map(tag => `<span class="tag">${tag.trim()}</span>`).join('')}
+                        ${tags}
                     </div>
                 `;
 
