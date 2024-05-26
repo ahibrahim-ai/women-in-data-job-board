@@ -39,31 +39,44 @@ footer {
     font-size: 1rem;
     border: 1px solid #b0c3ca;
     border-radius: 4px;
-    background-color: #fff;
+    background-color: #ffffff;
     color: #000000;
-    transition: border-color 0.2s;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    appearance: none; /* Remove default dropdown arrow */
+    -webkit-appearance: none; /* Remove default dropdown arrow in Safari */
+    -moz-appearance: none; /* Remove default dropdown arrow in Firefox */
+    background-image: url('data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjMDAwMDAwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMCAxMCI+PHBhdGggZD0iTTAgMGwxMCAxMEgwWiIvPjwvc3ZnPg==');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 10px 10px;
 }
 
 .filters select:focus {
     border-color: #e40428;
     outline: none;
+    box-shadow: 0 0 0 2px rgba(228, 4, 40, 0.2);
 }
 
 /* Button Styles */
 .filters button {
     padding: 0.5rem 1rem;
     font-size: 1rem;
-    border: 1px solid #e40428;
+    border: none;
     border-radius: 4px;
     background-color: #e40428;
     color: #ffffff;
     cursor: pointer;
-    transition: background-color 0.2s, border-color 0.2s;
+    transition: background-color 0.2s, box-shadow 0.2s;
 }
 
 .filters button:hover {
     background-color: #b0001e;
-    border-color: #8a0016;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.filters button:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(228, 4, 40, 0.2);
 }
 
 
