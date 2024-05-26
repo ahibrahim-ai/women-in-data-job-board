@@ -68,12 +68,12 @@ footer {
 }
 
 .job-card .tag {
-    background-color: #faf620;
     border-radius: 3px;
     font-size: 0.8rem;
     margin: 0.2rem;
     padding: 0.2rem 0.5rem;
 }
+
 
 @media (max-width: 768px) {
     .job-listings {
