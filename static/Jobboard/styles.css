@@ -3,7 +3,7 @@ body {
     background-color: #f4f4f4;
     margin: 0;
     padding: 0;
-    color: #333;
+    color: #1e1c1c;
 }
 
 header {
@@ -19,7 +19,7 @@ footer {
     padding: 1rem;
     text-align: center;
     position: fixed;
-    width: 100%;
+    width: 20%;
     bottom: 0;
 }
 
@@ -31,7 +31,7 @@ footer {
 }
 
 .job-card {
-    background-color: #fdbbba;
+    background-color: #fedad9;
     border: 1px solid #ddd;
     border-radius: 5px;
     padding: 1rem;
@@ -50,7 +50,7 @@ footer {
 
 .job-card h3 {
     font-size: 1rem;
-    color: #666;
+    color: #801515;
     margin: 0 0 0.5rem;
 }
 
