@@ -22,19 +22,50 @@ footer {
     width: 20%;  /* Ensure the footer spans the full width of the page */
     bottom: 0;
 }
-
+/* Filters Container */
 .filters {
     display: flex;
     justify-content: center;
     gap: 1rem;
     padding: 1rem;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #e9ecef;
+    margin-bottom: 1rem;
 }
 
-.filters select,
-.filters button {
-    padding: 2rem;
+/* Dropdown Styles */
+.filters select {
+    padding: 0.5rem;
     font-size: 1rem;
+    border: 1px solid #b0c3ca;
+    border-radius: 4px;
+    background-color: #fff;
+    color: #000000;
+    transition: border-color 0.2s;
 }
+
+.filters select:focus {
+    border-color: #e40428;
+    outline: none;
+}
+
+/* Button Styles */
+.filters button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: 1px solid #e40428;
+    border-radius: 4px;
+    background-color: #e40428;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.filters button:hover {
+    background-color: #b0001e;
+    border-color: #8a0016;
+}
+
 
 .job-listings {
     display: grid;
