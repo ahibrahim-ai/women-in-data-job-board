@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Job Listings</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <style>
+        body {
+            background-color: #ffffff; /* White background */
+            color: #000000; /* Black text */
+        }
+        .container {
+            padding-top: 20px;
+        }
+        .job-item {
+            background-color: rgb(228, 4, 40); /* Red background for job items */
+            color: #ffffff; /* White text for job items */
+            border: 2px solid #000000; /* Black border for job items */
+        }
+        .job-item h3 {
+            color: #ffffff; /* White text for job titles */
+        }
+        .job-item p {
+            color: #ffffff; /* White text for job details */
+        }
+        .navbar {
+            background-color: rgb(228, 4, 40); /* Red background for navbar */
+        }
+        .navbar-brand, .nav-link {
+            color: #ffffff; /* White text for navbar */
+        }
+    </style>
+</head> 
+<body>
+    <div class="container">
+        <h1 class="my-4">Job Listings</h1>
+        <div id="jobs"></div>
+    </div>
+    <script>
+        fetch('/api/jobs')
+            .then(response => response.json())
+            .then(data => {
+                const jobsDiv = document.getElementById('jobs');
+                data.forEach(job => {
+                    const jobElement = document.createElement('div');
+                    jobElement.className = 'job-item mb-3 p-3 border rounded';
+                    jobElement.innerHTML = `
+                        <h3>${job.title}</h3>
+                        <p><strong>Company:</strong> ${job.company}</p>
+                        <p><strong>Location:</strong> ${job.location}</p>
+                        <p><strong>Type:</strong> ${job.type}</p>
+                    `;
+                    jobsDiv.appendChild(jobElement);
+                });
+            });
+    </script>
+</body>
+</html>
