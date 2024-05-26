@@ -7,7 +7,7 @@ body {
 }
 
 header {
-    background-color: #c42323;
+    background-color: #333;
     color: #fff;
     padding: 1rem;
     text-align: center;
@@ -19,8 +19,21 @@ footer {
     padding: 0.5rem;  /* Reduced padding for a thinner footer */
     text-align: center;
     position: fixed;
-    width: 20%;  /* Ensure the footer spans the full width of the page */
+    width: 100%;  /* Ensure the footer spans the full width of the page */
     bottom: 0;
+}
+
+.filters {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.filters select,
+.filters button {
+    padding: 0.5rem;
+    font-size: 1rem;
 }
 
 .job-listings {
@@ -37,11 +50,10 @@ footer {
     padding: 1rem;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s;
-    position: relative;
 }
 
 .job-card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-5px);
 }
 
 .job-card a {
@@ -51,7 +63,7 @@ footer {
 }
 
 .job-card i {
-    font-size: 0.7rem;  /* Adjust the size of the icon */
+    font-size: 1.5rem;  /* Adjust the size of the icon */
     color: #666;  /* Adjust the color of the icon */
     position: absolute;
     top: 10px;
@@ -59,20 +71,18 @@ footer {
 }
 
 .job-card h2 {
-    font-size: 1.1rem;
-    color: #1e1c1c;
+    font-size: 1.2rem;
     margin: 0 0 0.5rem;
 }
 
 .job-card h3 {
-    font-size: 1.0rem;
+    font-size: 1rem;
     color: #666;
     margin: 0 0 0.5rem;
 }
 
 .job-card p {
     font-size: 0.9rem;
-    color: #666;
     margin: 0.5rem 0;
 }
 
