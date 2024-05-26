@@ -4,6 +4,9 @@ document.addEventListener('DOMContentLoaded', () => {
         .then(jobs => {
             const jobListings = document.querySelector('.job-listings');
 
+            // Clear existing content
+            jobListings.innerHTML = '';
+
             jobs.forEach(job => {
                 const jobCard = document.createElement('div');
                 jobCard.classList.add('job-card');
