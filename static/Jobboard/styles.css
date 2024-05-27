@@ -7,7 +7,7 @@ body {
 }
 
 header {
-    background-color: #c42323;
+    background-color: #333;
     color: #fff;
     padding: 1rem;
     text-align: center;
@@ -16,13 +16,13 @@ header {
 footer {
     background-color: #cc3333;
     color: #1e1c1c;
-    padding: 0.5rem;  /* Reduced padding for a thinner footer */
+    padding: 0.5rem;
     text-align: center;
     position: fixed;
-    width: 20%;  /* Ensure the footer spans the full width of the page */
+    width: 100%;
     bottom: 0;
 }
-/* Filters Container */
+
 .filters {
     display: flex;
     justify-content: center;
@@ -33,7 +33,6 @@ footer {
     margin-bottom: 1rem;
 }
 
-/* Dropdown Styles */
 .filters select {
     padding: 0.5rem;
     font-size: 1rem;
@@ -42,9 +41,9 @@ footer {
     background-color: #ffffff;
     color: #000000;
     transition: border-color 0.2s, box-shadow 0.2s;
-    appearance: none; /* Remove default dropdown arrow */
-    -webkit-appearance: none; /* Remove default dropdown arrow in Safari */
-    -moz-appearance: none; /* Remove default dropdown arrow in Firefox */
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
     background-image: url('data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjMDAwMDAwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMCAxMCI+PHBhdGggZD0iTTAgMGwxMCAxMEgwWiIvPjwvc3ZnPg==');
     background-repeat: no-repeat;
     background-position: right 10px center;
@@ -57,7 +56,6 @@ footer {
     box-shadow: 0 0 0 2px rgba(228, 4, 40, 0.2);
 }
 
-/* Button Styles */
 .filters button {
     padding: 0.5rem 1rem;
     font-size: 1rem;
@@ -79,7 +77,6 @@ footer {
     box-shadow: 0 0 0 2px rgba(228, 4, 40, 0.2);
 }
 
-
 .job-listings {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -94,42 +91,39 @@ footer {
     padding: 1rem;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s;
-    position: relative;
 }
 
 .job-card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-5px);
 }
 
 .job-card a {
     color: inherit;
-    text-decoration: none; /* Remove underline from links */
-    display: block; /* Ensure the link covers the entire card */
+    text-decoration: none;
+    display: block;
 }
 
 .job-card i {
-    font-size: 0.7rem;  /* Adjust the size of the icon */
-    color: #666;  /* Adjust the color of the icon */
+    font-size: 1.5rem;
+    color: #666;
     position: absolute;
     top: 10px;
     right: 10px;
 }
 
 .job-card h2 {
-    font-size: 1.1rem;
-    color: #1e1c1c;
+    font-size: 1.2rem;
     margin: 0 0 0.5rem;
 }
 
 .job-card h3 {
-    font-size: 1.0rem;
+    font-size: 1rem;
     color: #666;
     margin: 0 0 0.5rem;
 }
 
 .job-card p {
     font-size: 0.9rem;
-    color: #666;
     margin: 0.5rem 0;
 }
 
@@ -146,13 +140,56 @@ footer {
     padding: 0.2rem 0.5rem;
 }
 
+.job-detail-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
 
-@media (max-width: 768px) {
-    .job-listings {
-        grid-template-columns: 1fr;
-    }
+.job-detail-container h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
 
-    .job-card {
-        margin: 0.5rem 0;
-    }
+.job-detail-container h3 {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.job-detail-container p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.job-detail-container .tags {
+    margin-bottom: 1rem;
+}
+
+.job-detail-container .tag {
+    border-radius: 3px;
+    font-size: 0.9rem;
+    margin: 0.2rem;
+    padding: 0.3rem 0.6rem;
+    display: inline-block;
+}
+
+.job-detail-container a {
+    display: inline-block;
+    margin-top: 1rem;
+    color: #e40428;
+    text-decoration: none;
+    border: 1px solid #e40428;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.job-detail-container a:hover {
+    background-color: #e40428;
+    color: #ffffff;
 }
