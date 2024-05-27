@@ -199,12 +199,42 @@ footer {
     color: #ffffff;
 }
 
+/* Media Queries for Mobile */
 @media (max-width: 768px) {
+    .filters {
+        flex-direction: column; /* Stack filter options vertically */
+        align-items: stretch;
+    }
+
+    .filters select,
+    .filters button {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+
     .job-listings {
         grid-template-columns: 1fr;
+        padding: 1rem;
     }
 
     .job-card {
         margin: 0.5rem 0;
+    }
+
+    .job-detail-container {
+        padding: 1rem;
+        margin: 1rem;
+    }
+
+    .job-detail-container h2 {
+        font-size: 1.3rem;
+    }
+
+    .job-detail-container h3 {
+        font-size: 1.1rem;
+    }
+
+    .job-detail-container p {
+        font-size: 0.9rem;
     }
 }
