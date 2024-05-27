@@ -9,9 +9,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (job) {
                 document.getElementById('job-title').textContent = job.title;
-                document.getElementById('job-company').textContent = `${job.company} - ${job.location}`;
+                document.getElementById('job-company').textContent = `${job.company} - ${job.city}, ${job.country}`;
                 document.getElementById('job-type').textContent = job.type;
-                document.getElementById('job-location').textContent = job.location;
+                document.getElementById('job-location').textContent = job.city;
                 document.getElementById('job-description').innerHTML = job.description.replace(/\n/g, '<br>');
 
                 const tags = job.tags ? job.tags.split(',').map(tag => {

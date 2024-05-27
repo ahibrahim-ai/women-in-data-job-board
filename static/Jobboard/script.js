@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Clear existing content
         jobListings.innerHTML = '';
 
-        const colors = ['#9B0F0F', '#BB342F', '#68797F', '#fb6f92', '#8F9A9C', '#E63F39'];
+        const colors = ['#ffc09f', '#809bce', '#e8dff5', '#fb6f92', '#84dcc6', '#dfb2f4'];
 
         // Hash function to assign a consistent color to each tag
         function hashStringToColor(str) {
