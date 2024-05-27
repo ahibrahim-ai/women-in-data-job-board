@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Hash function to assign a consistent color to each tag
     function hashStringToColor(str) {
-        const colors = ['#ffc09f', '#809bce', '#e8dff5', '#fb6f92', '#84dcc6', '#dfb2f4'];
+        const colors = ['#CD464E', '#CD464E', '#D5212E','#760A0B', '#FF8383', '#9B0F0F', '#BB342F','#E63F39'];
         let hash = 0;
         for (let i = 0; i < str.length; i++) {
             hash = str.charCodeAt(i) + ((hash << 5) - hash);
