@@ -142,6 +142,7 @@ footer {
 .job-card .tag {
     border-radius: 3px;
     font-size: 0.8rem;
+    color: #ffffff;
     margin: 0.2rem;
     padding: 0.2rem 0.5rem;
 }
@@ -178,6 +179,7 @@ footer {
 .job-detail-container .tag {
     border-radius: 3px;
     font-size: 0.9rem;
+    color: #ffffff;
     margin: 0.2rem;
     padding: 0.3rem 0.6rem;
     display: inline-block;
