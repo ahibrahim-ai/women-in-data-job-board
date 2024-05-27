@@ -1,5 +1,5 @@
 body {
-    font-family: Open;
+    font-family: "Open sans";
     background-color: #f4f4f4;
     margin: 0;
     padding: 0;
@@ -14,11 +14,11 @@ header {
 }
 
 footer {
-    background-color: #cc3333;
+    background-color: #dddddd;
     color: #1e1c1c;
     padding: 0.5rem;  /* Reduced padding for a thinner footer */
     text-align: center;
-    position: fixed;
+    position: static;
     width: 20%;  /* Ensure the footer spans the full width of the page */
     bottom: 0;
 }
