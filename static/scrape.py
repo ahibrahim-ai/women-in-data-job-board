@@ -1,36 +1,51 @@
 import requests
 from bs4 import BeautifulSoup
-import json
+import pandas as pd
 
-# URL of the webpage to scrape
-url = 'http://womenindata.co.uk/diverse-data-jobs/'
+def get_job_listings(url):
+    job_listings = []
+    page = 1
 
-# Send a GET request to the webpage
-response = requests.get(url)
-soup = BeautifulSoup(response.text, 'html.parser')
+    while True:
+        response = requests.get(url, params={'page': page})
+        soup = BeautifulSoup(response.content, 'html.parser')
+        
+        job_cards = soup.find_all('div', class_='job-card')
+        if not job_cards:
+            break
+        
+        for job_card in job_cards:
+            title = job_card.find('h2').text.strip()
+            location = job_card.find('div', class_='location').text.strip()
+            salary = job_card.find('div', class_='salary').text.strip()
+            job_type = job_card.find('div', class_='type').text.strip()
+            category = job_card.find('div', class_='category').text.strip()
+            description = job_card.find('div', class_='description').text.strip()
+            
+            job_listings.append({
+                'Title': title,
+                'Location': location,
+                'Salary': salary,
+                'Type': job_type,
+                'Category': category,
+                'Description': description
+            })
+        
+        page += 1
 
-# Find job postings (this will vary depending on the structure of the webpage)
-job_posts = soup.find_all('div', class_='job-posting')
+    return job_listings
 
-# Extract job details
-jobs = []
-for post in job_posts:
-    title = post.find('h2').text.strip()
-    company = post.find('h3').text.strip()
-    location = post.find('span', class_='location').text.strip()
-    job_type = post.find('span', class_='job-type').text.strip()
-    description = post.find('div', class_='description').text.strip()
-    tags = [tag.text.strip() for tag in post.find_all('span', class_='tag')]
+# URL of the job search page
+url = 'https://harnham.com/job-search'
 
-    jobs.append({
-        'title': title,
-        'company': company,
-        'location': location,
-        'type': job_type,
-        'description': description,
-        'tags': ', '.join(tags)
-    })
+# Scrape the job listings
+job_listings = get_job_listings(url)
 
-# Save the job details to a JSON file
-with open('jobs.json', 'w') as f:
-    json.dump(jobs, f, indent=4)
+# Convert to DataFrame
+df = pd.DataFrame(job_listings)
+
+# Display the DataFrame
+print(df)
+
+# Save to CSV if needed
+df.to_csv('harnham_job_listings.csv', index=False)

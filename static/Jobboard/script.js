@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Clear existing content
         jobListings.innerHTML = '';
 
-        const colors = ['#CD464E', '#CD464E', '#D5212E','#760A0B', '#FF8383', '#9B0F0F', '#BB342F','#E63F39' ];
+        const colors = ['#ffc09f', '#809bce', '#e8dff5', '#fb6f92', '#84dcc6', '#dfb2f4'];
 
         // Hash function to assign a consistent color to each tag
         function hashStringToColor(str) {
@@ -86,13 +86,29 @@ document.addEventListener('DOMContentLoaded', () => {
         const city = document.getElementById('city-filter').value;
         const country = document.getElementById('country-filter').value;
         const type = document.getElementById('type-filter').value;
+        const searchTerm = document.getElementById('search-bar').value.toLowerCase();
 
         const filteredJobs = jobsData.filter(job => {
-            return (city === '' || job.city === city) &&
+            const matchesSearchTerm = job.title.toLowerCase().includes(searchTerm) ||
+                                      job.description.toLowerCase().includes(searchTerm) ||
+                                      job.company.toLowerCase().includes(searchTerm);
+            return matchesSearchTerm &&
+                   (city === '' || job.city === city) &&
                    (country === '' || job.country === country) &&
                    (type === '' || job.type === type);
         });
 
+        displayJobs(filteredJobs);
+    });
+
+    // Apply search when typing in the search bar
+    document.getElementById('search-bar').addEventListener('input', () => {
+        const searchTerm = document.getElementById('search-bar').value.toLowerCase();
+        const filteredJobs = jobsData.filter(job => {
+            return job.title.toLowerCase().includes(searchTerm) ||
+                   job.description.toLowerCase().includes(searchTerm) ||
+                   job.company.toLowerCase().includes(searchTerm);
+        });
         displayJobs(filteredJobs);
     });
 });
