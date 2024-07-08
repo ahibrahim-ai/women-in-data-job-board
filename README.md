@@ -31,7 +31,7 @@ Planned enhancements to further improve the job board:
 ### Future Enhancements
 The current job board offers significant benefits. Adding these features will enhance it further and provide several strategic benefits:
 - **Centralised Job Listing Data**: Consolidates job listings from various industry partners into a single, highly accessible repository, maintaining consistent labeling and filtration.
-- **Increased Visibility**: Enhances the visibility of job openings from organizations committed to diversity and inclusion, amplifying their reach and attracting a diverse range of applicants.
+- **Increased Visibility**: Enhances the visibility of job openings from organisations committed to diversity and inclusion, amplifying their reach and attracting a diverse range of applicants.
 - **Streamlined Job Search**: Simplifies the job search process with advanced filtering and detailed job descriptions, saving users time and effort.
 
 ### Cost Effectiveness
@@ -39,9 +39,9 @@ To date, the project has incurred no costs, making it a highly economical soluti
 
 ## Skills Demonstrated
 This project is a significant step towards a goal of becoming a data scientist. The skills and experiences gained here are directly applicable to the field of data science, including:
-- **Data Analysis**: Strengthened ability to handle, analyze, and present data effectively.
+- **Data Analysis**: Strengthened ability to handle, analyse, and present data effectively.
 - **Programming**: Improved programming skills, particularly in languages essential for data science such as Python.
-- **User Experience**: Gained a deeper understanding of user-centric design, crucial for presenting data insights and visualizations.
+- **User Experience**: Gained a deeper understanding of user-centric design, crucial for presenting data insights and visualisations.
 - **Continuous Learning**: Demonstrated a commitment to continuous learning and improvement, vital in the ever-evolving field of data science.
 
 ### Alignment with Professional Goals
